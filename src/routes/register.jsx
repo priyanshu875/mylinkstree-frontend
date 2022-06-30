@@ -10,7 +10,7 @@ function Register(){
     
     async function registerUser(event){
         event.preventDefault();
-        try{const obj= await fetch('http://localhost:3001/auth/signup',{
+        try{const obj= await fetch('https://mylinktree.herokuapp.com/auth/signup',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({name,email,password})

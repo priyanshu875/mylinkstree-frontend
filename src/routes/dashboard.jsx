@@ -22,7 +22,7 @@ function Dashboard(){
         const token=localStorage.getItem('token');
         const user=jwt_decode(token);
         const userName=user.userName;
-        const obj=await fetch('http://localhost:3001/links/dashboard',{
+        const obj=await fetch('https://mylinktree.herokuapp.com/links/dashboard',{
             headers:{
                 'x-access-token':userName
             }
@@ -75,7 +75,7 @@ function Dashboard(){
         const userName=user.userName;
         event.preventDefault();
         // console.log('reach');
-        const obj1=await fetch('http://localhost:3001/operation/addlink',{
+        const obj1=await fetch('https://mylinktree.herokuapp.com/operation/addlink',{
             method:'POST',
             headers:{
                 'Content-Type':'application/json'
@@ -92,7 +92,7 @@ function Dashboard(){
     const[Id,setid]=useState('');
     async function deleteLink(){
         try{console.log(Id);
-        const url='http://localhost:3001/operation/deletelink/'+Id;
+        const url='https://mylinktree.herokuapp.com/operation/deletelink/'+Id;
         console.log(url);
         const obj2=await fetch(url,{
             method:'POST',
