@@ -28,6 +28,7 @@ function Register(){
         }
         catch(err){
             alert("server error");
+            window.location.reload();
         }
     }
 
