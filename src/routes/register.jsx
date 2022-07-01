@@ -11,17 +11,21 @@ function Register(){
     async function registerUser(event){
         event.preventDefault();
         try{const obj= await fetch('https://mylinktree.herokuapp.com/auth/signup',{
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({name,email,password})
-        })
-        const data= await obj.json();
+                method:'POST',
+                headers:{'Content-Type':'application/json'},
+                body:JSON.stringify({name,email,password})
+            })
+            const data= await obj.json();
 
-        console.log(data);
-        if(data.status=='ok'){
-            alert('account created');
-            window.location.href='/login';
-        }}
+            console.log(data);
+            if(data.status=='ok'){
+                alert('account created');
+                window.location.href='/login';
+            }
+            else if(data.status=='err'){
+                alert('Email already exists');
+            }
+        }
         catch(err){
             alert("server error");
         }
