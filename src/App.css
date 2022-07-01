@@ -5,3 +5,6 @@
 .logout{
     background-color: white;
 }
+button{
+    cursor: pointer;
+}

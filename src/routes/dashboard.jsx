@@ -131,7 +131,7 @@ function Dashboard(){
     
 
     return <div className="Dashboard">
-        <div><h1 className="name"><span>{name} </span><Link to="../logout" className="logoutlink">Logout</Link></h1></div> 
+        <div><h1 className="name"><span>{"/"+name} </span><Link to="../logout" className="logoutlink">Logout</Link></h1></div> 
         
         <div className="dash-body">
             <div className="dash-cont-one">
@@ -148,7 +148,7 @@ function Dashboard(){
                     value={linkUrl}
                     onChange={(e)=>setLinkUrl(e.target.value)}
                     type="text"
-                    placeholder="URL (add 'http://' at beginning with url)"
+                    placeholder="URL (add 'https://' at beginning with url)"
                     required
                     className="linkurl"
                     />
@@ -172,7 +172,7 @@ function Dashboard(){
             <div className="dash-cont-two">
 
                      <h1>Your Link</h1>   
-                     <p>http://localhost:3000/links/{userName}</p>
+                     <p>https://mylinkstree.netlify.app/links/{userName}</p>
             </div>
         </div>
 
