@@ -2,12 +2,16 @@ import React, { useState } from "react";
 import './css/login.css'
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import Loader from "react-spinners/DotLoader";
+
 
 function Login(){
     const [email,setEmail]=useState('');
     const [password,setPassword]=useState('');
+    const [loading,setLoading]=useState(false);
 
     async function loginUser(event){
+        setLoading(true)
         event.preventDefault();
        
         try{const obj=await fetch('https://mylinktree.herokuapp.com/auth/signin',{
@@ -15,7 +19,9 @@ function Login(){
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({email,password})
         })
+        
         const data=await obj.json();
+        setLoading(false)
         if(data.user){
             localStorage.setItem("token",data.user)
             alert('login succesfull')
@@ -39,7 +45,7 @@ function Login(){
     },[])
 
     return <div className="Login">
-        <div className="center-div">
+        {loading ? <Loader color="#0f1f64" size={90} className="dotloading"/> : <div className="center-div">
             <h1>Login</h1>
             <form onSubmit={loginUser}>
                 <input
@@ -63,7 +69,7 @@ function Login(){
                 value='Login'
                 />
             </form>
-        </div>    
+        </div>  }
     </div>
 }
 

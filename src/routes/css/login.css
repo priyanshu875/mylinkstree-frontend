@@ -8,6 +8,11 @@
     /* background-size: cover; */
 
 }
+.dotloading{
+    margin: auto;
+    margin-top: 40vh;
+    /* color: #0f1f64; */
+}
 .center-div{
     /* border: 2px solid red; */
     width: fit-content;
