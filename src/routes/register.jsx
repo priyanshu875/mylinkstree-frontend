@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import './css/register.css'
 import { Link } from "react-router-dom";
-
+import Loader from "react-spinners/DotLoader";
 
 function Register(){
     const[name,setName]=useState('');
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
+    const [loading,setLoading]=useState(false);
     
     async function registerUser(event){
+        setLoading(true);
         event.preventDefault();
         try{const obj= await fetch('https://mylinktree.herokuapp.com/auth/signup',{
                 method:'POST',
@@ -18,6 +20,7 @@ function Register(){
             const data= await obj.json();
 
             console.log(data);
+            setLoading(false)
             if(data.status=='ok'){
                 alert('account created');
                 window.location.href='/login';
@@ -33,7 +36,7 @@ function Register(){
     }
 
     return <div className="Register">
-        <div className="center-div">
+        {loading ? <Loader color="#0f1f64" size={90} className="dotloading"/> :<div className="center-div">
             <h1>Register</h1>
             <form onSubmit={registerUser}>
                 <input
@@ -67,7 +70,7 @@ function Register(){
 
                 />
             </form>
-        </div>
+        </div>}
     </div>
 }
 
