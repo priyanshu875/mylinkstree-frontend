@@ -16,6 +16,11 @@ function Home(){
         <HomeContOne />
         <HomeContTwo />
        <HomeContThree />
+       <footer>
+        <div className="footname">
+            <h1>Mylinkstree..</h1>
+        </div>
+       </footer>
     </div>
 }
 export default Home;
