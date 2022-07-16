@@ -49,7 +49,7 @@ function UserLinks(){
 
     return <div className="userLinks">
         <div className="centered-div">
-            <h1>Hello,I am</h1>
+            {/* <h1>Hello,I am</h1> */}
             <p className="user-name">{name}</p>
             <div className="linkslist">
                 {linkslist.map((value,key)=>{

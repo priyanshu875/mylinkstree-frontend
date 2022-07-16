@@ -1,25 +1,21 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import HomeContOne from "./HomeContOne";
+import HomeContTwo from "./HomeContTwo";
+import HomeContThree from "./HomeContThree";
 import './css/home.css'
 
 function Home(){
     return <div className="Home">
         <header>
-        <Link to="./login"><button className="login-btn">Login</button></Link>
+            <span className="logo"><h1>Mylinkstree</h1></span>
+            <div><Link to="./login"><button className="login-btn">Login</button></Link>
+            <Link to="./register"><button className="signup-btn">Sign up free</button></Link></div>
         </header>
-
-        <div className="app-body">
-            <div className="cont-one">
-                <h1>We've got <br /> you <br /> covered</h1>
-                <Link to="./register"><button className="register-btn">Get your link</button></Link>
-            </div>
-            <div className="cont-two">
-            <img src={require('./anmgif.gif')} />
-            </div>
-            
-
-        </div>
+        
+        <HomeContOne />
+        <HomeContTwo />
+       <HomeContThree />
     </div>
 }
 export default Home;

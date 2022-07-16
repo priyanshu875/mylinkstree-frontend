@@ -21,17 +21,20 @@ function Login(){
         })
         
         const data=await obj.json();
-        setLoading(false)
+        
         if(data.user){
             localStorage.setItem("token",data.user)
             alert('login succesfull')
+            setLoading(false)
             window.location.href='/dashboard';
         }
         else{
             alert('check your credentials')
+            setLoading(false)
         }}
         catch(err){
             alert("server error");
+            setLoading(false)
         }
 
     }

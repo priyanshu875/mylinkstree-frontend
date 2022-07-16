@@ -1,4 +1,5 @@
 *{
+  
     margin:0;
     -ms-overflow-style:none;
     scrollbar-width: none;
@@ -10,108 +11,235 @@
     display: none;
   }
   .Home{
-    background-color: #202020;
-    height: 100vh;
-    width: 100vw;
     overflow: scroll;
   }
   header{
-    /* border: 2px solid red; */
-    height: 15vh;
-    justify-content: right;
-  }
-  
-  button{
-    border-radius: 10px;
-    padding: 8px 10px;
-    background:none;
-    border: none;
-  }
-  
-  .login-btn{
-    float: right;
-    padding: 10px 15px;
-    margin-top: 2rem;
-    font-size: 24px;
-    margin-right: 4rem;
-    background-color: #ff66c4;
-    font-weight: bolder;
-  }
-  .register-btn{
-    padding: 15px 25px;
-    font-size: 16px;
-    background-color: #5271ff;
-    margin-left: .5rem;
-    margin-top: .5rem;
-    font-weight: bolder;
-  }
-  .cont-two img{
-    /* border: 2px solid red; */
-    height: 50vh;
-    width: 100%;
-    margin-top: 5rem;
-    pointer-events: none;
-    /* user-select: none; */
-  }
-  .app-body{
-    /* border: 2px solid red; */
+    position: absolute;
+    /* border:  2px solid black; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; 
+    margin:auto;
+    height: fit-content;
+    width: 82vw;
+    margin-top: 3rem;
+    border-radius: 10000px;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 35px;
     display: flex;
     justify-content: space-between;
+    position: fixed;
   }
-  .cont-one{
-    /* border: 2px solid blue; */
-    margin-left: 5rem;
-    /* width: 40vw; */
+  header .logo h1{
+    margin-top: 2px;
+    font-size: 1.7rem;
+  }
+  
+  header button{
+    float:right;
+    font-size: 15px;
+    border-radius:10000px ;
+    margin-left: 5px;
+    /* margin-top: 5px; */
+    font-weight: 600;
+    padding: 15px 17px;
+    background-color: rgb(30, 35, 48);
     color: white;
+    border: none;
   }
-  .cont-two{
+  header .login-btn{
+    border-radius: 10px;
+    background-color: rgb(239, 240, 236);
+    color: black;
+  }
+  .homeContOne{
+    /* border: 2px solid red; */
+    background-color: rgb(37, 79, 26);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    
+  }
+  .title-one{
+    /* border:  2px solid blue; */
+    height: min-content;
+    margin-top: 10rem;
+    margin-left: 5rem;
+    
+  }
+  .title-one h1{
+    font-size: 60px;
+    font-weight: 800;
+    text-align: left;
+    color: rgb(210, 232, 35);
+    letter-spacing: -0.02em;
+  }
+  .title-one p{
+    color: rgb(210, 232, 35);
+    font: 20px;
+    padding: .5rem;
+    font-weight: 600;
+  }
+  .title-one button{
+    /* border: 2px solid red; */
+    margin-top: 1rem;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 18px 26px 20px;
+    background-color: rgb(233, 192, 233);
+    border-radius: 10000px;
+  }
+  .image-one{
     /* border: 2px solid black; */
-    margin-right: 10rem;
+    height: fit-content;
+    width: fit-content;
+    /* display: none; */
+    margin-top: 10rem;
+    margin-left: 10rem;
   }
-  .cont-one h1{
-    font-size: 91px;
+  .image-one img{
+    height: 50vh;
+    width: 30vw;
   }
+  
+  .homeContTwo{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    background-color: rgb(233, 192, 233);
+    /* justify-content: space-between; */
+  }
+  .image-two{
+    /* display: block; */
+    /* border: 2px solid red; */
+    color:rgb(233, 192, 233) ;
+    /* border: none; */
+    margin-top: 10rem;
+    margin-left: 10rem;
+
+  }
+  .image-two img{
+    height: 50vh;
+    width: 30vw;
+  }
+  .title-two{
+    /* border: 2px solid red; */
+    margin-left: 0;
+    width: 50vw;
+    margin-right: 10vw;
+    
+  }
+  .title-two h1{
+    margin: 0 auto;
+    color: rgb(80, 34, 116);
+    font-size: 50px;
+  }
+  .title-two p{
+    color: rgb(80, 34, 116);
+  }
+  .title-two button{
+    background-color: rgb(80, 34, 116);;
+    color: white;
+    font-weight: 600;
+    padding: 15px 20px;
+  }
+  .homeContThree{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(120, 0, 22);
+  }
+  .title-three{
+    width: 40vw;
+  }
+  .title-three h1{
+    color:rgb(233, 192, 233);
+  }
+  .title-three p{
+    color:rgb(233, 192, 233);
+  }
+
   @media (max-width: 920px){
-    .Home{
-      height: 100vh;
-      width: 100vw;
-      background-color: #202020;
-      overflow: scroll;
+    
+    
+    header{
+      width: 70vw;
+      gap: 1rem;
     }
-    .login-btn{
-      font-size: 18px;
-      margin-right: 2rem;
+    header .logo h1{
+      font-size: 1rem;
+      margin-top: .7rem;
+
     }
-    .register-btn{
-      font-size: 15px;
-      margin-left: 0;
+    header button{
+      font-size: 12px;
+    
     }
-    .app-body{
-      margin-top: 2rem;
+    .homeContOne{
+      /* background-color: red; */
       flex-direction: column;
-      justify-content: start;
-      gap:5rem;
-      /* padding-bottom: 4rem; */
+      justify-content: center;
+      align-items: center;
+      height: fit-content;
+      
     }
-    .cont-one h1{
-      text-align: left;
-      font-size: 3rem;
+    .image-one{
+      margin: 0;
     }
-    .cont-one{
+    .image-one img{
+      padding: 2rem 0;
+      height: 50vh;
+      width: 50vw;
+      margin: 0;
+    }
+    .title-one{
       margin-left: 2rem;
     }
-    .cont-two{
-      margin-right: 0;
-      
+    .title-one h1{
+      font-size: 50px;
     }
-    .cont-two img{
-      
-      margin: auto;
-      margin-left: 40px;
-      
-      width: 80%;
-      height: 30vh;
-      /* margin-bottom: 1rem; */
+    .homeContTwo{
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+      padding: 2rem 0;
+    }
+    .image-two img{
+      width: 70vw;
+      height: 40vh;
+    }
+    .title-two{
+      margin: 0;
+      margin-left: 1.5rem;
+      width: 90vw;
+      padding: 0;
+      height: fit-content;
+    }
+    .title-two h1{
+      font-size: 40px;
+    }
+    .homeContThree{
+      flex-direction: column;
+      align-items: center;
+      height: fit-content;
+    }
+    .image-three img{
+      width: 70vw;
+    }
+    .title-three{
+      margin: 0;
+      margin-left: 1.5rem;
+      margin-top: 2rem;
+      width: 90vw;
+    }
+    .title-three h1{
+      font-size: 40px;
+
     }
   }
+
   
