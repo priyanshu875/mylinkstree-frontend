@@ -15,7 +15,7 @@ function UserLinks(){
     const userid=useParams().userid;
     async function getuserlinks(){
         
-        const obj=await fetch('https://mylinktree.herokuapp.com/links',{
+        const obj=await fetch('https://mylinktree.onrender.com/links',{
             headers:{
                 'x-access-tokens':userid
             }

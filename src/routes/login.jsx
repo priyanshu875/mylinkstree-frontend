@@ -14,7 +14,7 @@ function Login(){
         setLoading(true)
         event.preventDefault();
        
-        try{const obj=await fetch('https://mylinktree.herokuapp.com/auth/signin',{
+        try{const obj=await fetch('https://mylinktree.onrender.com/auth/signin',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body:JSON.stringify({email,password})
