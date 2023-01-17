@@ -134,6 +134,7 @@ function Dashboard(){
         <div><h1 className="name"><span>{"/"+name} </span><Link to="../logout" className="logoutlink">Logout</Link></h1></div> 
         
         <div className="dash-body">
+            {/* ------upload photo----- */}
             <div className="dash-cont-one">
                 <form onSubmit={addLink}>
                     <input

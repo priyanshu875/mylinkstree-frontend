@@ -12,7 +12,7 @@ function Register(){
     async function registerUser(event){
         setLoading(true);
         event.preventDefault();
-        try{const obj= await fetch('https://mylinktree.herokuapp.com/auth/signup',{
+        try{const obj= await fetch('https://mylinktree.herokuap.com/auth/signup',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify({name,email,password})
